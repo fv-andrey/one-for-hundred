@@ -2,16 +2,18 @@ public class Main {
     public static void main(String[] args) {
 
         int initial = 500;
-        int replenishment = 830;
-        int result = initial + replenishment;
-        int bonus = result / 100;
+        int replenishment = 300;
+        int bonus = replenishment / 100;
+        int resultWithBonus = initial + replenishment + bonus;
+        int resultWithoutBonus = initial + replenishment;
 
-        if (result > 1000) {
+
+        if (replenishment > 1000) {
             System.out.println(("Вам начислено ") + bonus + (" бонусов") );
-            System.out.println(("На вашем счету ") + (result + bonus) + (" рублей"));
+            System.out.println(("На вашем счету ") + resultWithBonus + (" рублей"));
         } else {
-            System.out.println(("На вашем счету ") + result + (" рублей"));
-            System.out.println(("Пополните счет более чем на ") + (1000 - result) + (" рублей и мы начислим вам 1 рубль за каждые 100 рублей на вашем счету"));
+            System.out.println(("На вашем счету ") + resultWithoutBonus + (" рублей"));
+            System.out.println("Пополните счет более чем на 1000 рублей одним платежем и мы начислим вам 1 рубыль за каждые 100");
         }
     }
 }
