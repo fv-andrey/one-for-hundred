@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         int initial = 500;
-        int replenishment = 300;
+        int replenishment = 1100;
         int bonus = replenishment / 100;
         int resultWithBonus = initial + replenishment + bonus;
         int resultWithoutBonus = initial + replenishment;
